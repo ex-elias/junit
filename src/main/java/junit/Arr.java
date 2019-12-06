@@ -8,20 +8,22 @@ public class Arr {
 
 	public int[] front11(int[] a, int[] b) {
 		int[] array = {};
-		if(a.length > 0 && b.length > 0)
+		if(a.length > 0 && b.length > 0) {
 			array = new int[] {a[0], b[0]};
-		else if(a.length == 0 && b.length > 0)
+		} else if(a.length == 0 && b.length > 0) {
 			array = new int[] {b[0]};
-		else if(a.length > 0 && b.length == 0)
+		} else if(a.length > 0 && b.length == 0) {
 			array = new int[] {a[0]};
+		}
 		return array;
 	}
 
 	public int countEvens(int[] nums) {
 		int kNum = 0;
 		for(int i = 0; i < nums.length; i++) {
-			if(nums[i] % 2 == 0)
+			if(nums[i] % 2 == 0) {
 				kNum++;
+			}
 		}
 		return kNum;
 	}
@@ -31,8 +33,9 @@ public class Arr {
 		for(int i = 1; i < nums.length; i++) {
 			if(nums[i] - nums[i - 1] == 1) {
 				k++;
-				if(k == 2)
+				if(k == 2) {
 					return true;
+				}
 			} else {
 				k = 0;
 			}
