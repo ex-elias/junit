@@ -1,4 +1,4 @@
-package junit;
+package junit.str;
 
 public class Str {
 	
