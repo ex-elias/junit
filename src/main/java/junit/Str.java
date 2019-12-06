@@ -7,14 +7,18 @@ public class Str {
 	}
 
 	public String withoutX2(String str) {
-		if(str == "")
+		if(str == "") {
 			return str;
-		if(str.startsWith("xx"))
+		}
+		if(str.startsWith("xx")) {
 			return str.substring(2);
-		if(str.startsWith("x"))
+		}
+		if(str.startsWith("x")) {
 			return str.substring(1);
-		if(str.charAt(1) == 'x')
+		}
+		if(str.charAt(1) == 'x') {
 			return str.charAt(0) + str.substring(2);
+		}
 		return str;
 	}
 
@@ -29,8 +33,9 @@ public class Str {
 	public String starOut(String str) {
 		String res = "";
 		while(str.indexOf("*") != -1) {
-			if(str.equals("*"))
+			if(str.equals("*")) {
 				str = "";
+			}
 			for(int i = 0; i < str.length(); i++) {
 				if(str.charAt(i) == '*') {
 					if(i == 0 && i != str.length() - 1) {
@@ -57,10 +62,12 @@ public class Str {
 		String res = "";
 		for(int i = 0; i < str.length(); i++) {
 			if(str.startsWith(word, i)) {
-				if(i != 0)
+				if(i != 0) {
 					res += "" + str.charAt(i - 1);
-				if(i + word.length() != str.length())
+				}
+				if(i + word.length() != str.length()) {
 					res += "" + str.charAt(i + word.length());
+				}
 			}
 		}
 		return res;
